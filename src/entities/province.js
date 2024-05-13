@@ -1,20 +1,9 @@
-import config from './src/configs/db-configs.js'
-import pkg from 'pg' 
-const { Client }  = pkg;
-
-export default Province class
-getallAsync() {
-
-}
-getByIdAsync() {
-
-}
-createAsync() {
-
-}
-updateAsync() {
-
-}
-deleteBy() {
-
-}
+class Province { 
+    id;
+    name;    
+    full_name;    
+    latitude;    
+    longitude;    
+    display_order; 
+    } 
+    export default Province;
