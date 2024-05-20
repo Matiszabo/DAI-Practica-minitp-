@@ -1,12 +1,13 @@
-import config from './src/configs/db-configs.js'
-import pkg from 'pg' 
-import express from 'express';
-const { Client }  = pkg;
-const app = express();
+import express from"express";  
+import cors from "cors"; 
+import ProvinceRouter from"./src/controllers/provinces-controller.js" 
 
-const client = new Client(config); 
-await client.connect();
+const app = express(); 
+const port = 3000; 
 
-
-
-
+app.use(cors()); 
+app.use(express.json());
+app.use("/api/province", ProvinceRouter);
+app.listen(port,() => { 
+    console.log(`Example app listening on port ${port}`) 
+})
