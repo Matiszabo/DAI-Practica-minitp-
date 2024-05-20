@@ -20,7 +20,7 @@ export default class ProvinceRepository {
 
     getByIdAsync = async (id) => {
         let returnProvince = null;
-        console.log("juli", id)
+        console.log("Facu", id)
         const client = new Client(DBConfig);
         await client.connect();
         try {
